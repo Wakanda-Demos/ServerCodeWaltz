@@ -1,0 +1,1 @@
+{    "toJSON": true,    "dbInfo": [{        "name": "Model",        "uuid": ""    }],    "extraProperties": {        "version": "1",        "classes": {        },        "model": {}    },    "dataClasses": []}
