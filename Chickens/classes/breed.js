@@ -1,0 +1,1 @@
+﻿breed = model.addClass("Breed", "Breeds");breed.addAttribute("ID", "storage", "long", "key auto");breed.addAttribute("name", "Storage", "string");

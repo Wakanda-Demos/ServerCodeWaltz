@@ -11,17 +11,17 @@ chicken.addAttribute("age", "calculated", "long");
 
 // ---------------------------
 
-emp.age.onGet = function()
+chicken.age.onGet = function()
 {
 	return datetool.computeAge(this.hatchDate, "weeks");
 }
 
-emp.age.onSort = function(ascending)
+chicken.age.onSort = function(ascending)
 {
 	return datetool.buildSortQuery(ascending, "hatchDate");
 }
 
-emp.age.onQuery = function(compareOperator, compareValue)
+chicken.age.onQuery = function(compareOperator, compareValue)
 {
-	return datetool.buildQuery(compareOperator, compareValue, "birthdate");
+	return datetool.buildQuery(compareOperator, compareValue, "hatchDate");
 }

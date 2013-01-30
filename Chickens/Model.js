@@ -9,3 +9,5 @@ model = new DataStoreCatalog();
 include("scripts/utils.js");
 
 include("classes/chicken.js");
+
+include("classes/breed.js");

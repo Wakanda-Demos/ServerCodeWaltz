@@ -34,11 +34,18 @@
                     "scope": "public", 
                     "type": "Coop", 
                     "uuid": "50B14B3DEFC64D6CA480279E33EBF643"
+                }, 
+                {
+                    "kind": "calculated", 
+                    "name": "age", 
+                    "scope": "public", 
+                    "scriptKind": "javascript", 
+                    "type": "long"
                 }
             ], 
             "className": "Chicken", 
             "collectionName": "Chickens", 
-            "name": "Chickens", 
+            "name": "Chicken", 
             "scope": "public", 
             "uuid": "077035E6691340C395FE707B73D62695"
         }, 
@@ -79,7 +86,7 @@
             ], 
             "className": "Coop", 
             "collectionName": "Coops", 
-            "name": "Coops", 
+            "name": "Coop", 
             "scope": "public", 
             "uuid": "95995A60E60B43398E3061B2EFF91BE5"
         }
@@ -108,8 +115,8 @@
                     "isOpen": "true", 
                     "pathVisible": true, 
                     "position": {
-                        "X": 390, 
-                        "Y": 26
+                        "X": 399, 
+                        "Y": 17
                     }
                 }, 
                 "panelColor": "#D88CFF"

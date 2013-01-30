@@ -24,6 +24,26 @@ function setToCapitalizeMultiple(attributeName)
 }
 
 
+function loadArrayFromFile(fileName)
+{
+    var result = [];
+    var file = File(getFolder().path + "importData/"+fileName);
+    var text = loadText(file);
+    
+    if (text != null) {
+        var arr = text.split("\n");
+        arr.forEach(function(item) {
+           result.push(item);
+        });
+    }
+    return result;
+}
+
+
+
+
+
+
 // data tools to compute a number of years between now and a date
 // -------------------------------------------------------------------------
 
@@ -106,6 +126,7 @@ datetool.buildSortQuery = function(ascending, attributeName)
 	else
 		return attributeName;
 };
+
 
 
 // -----------------------------------------------------------------------------------
