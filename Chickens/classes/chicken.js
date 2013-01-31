@@ -3,7 +3,8 @@
 //this addClas method will not blow away what exists
 
 chicken = model.addClass("Chicken", "Chickens");
-
+chicken.addAttribute("gender", "storage", "string");
+chicken.addAttribute("breed", "relatedEntity", "Breed", "Breed");
 chicken.addAttribute("age", "calculated", "long");
 
 

@@ -1,4 +1,21 @@
-﻿// an 'onSet' event listener
+﻿/**
+ * @private
+ * @method randomInteger
+ * @param {number} min
+ * @param {number} max
+ * @returns number
+ **/
+function randomInteger(min, max) {
+    var
+        result;
+
+    result = Math.round(min + (Math.random() * (max - min)));
+    return result;
+}
+
+
+
+// an 'onSet' event listener
 
 function setToCapitalize(attributeName) 
 {

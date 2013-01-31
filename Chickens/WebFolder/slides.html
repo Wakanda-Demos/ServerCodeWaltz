@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head><title>JS and DB Server</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="WAF.config.modules" content="dataprovider"/>
+
+	<meta name="WAF.config.loadJS" content="index.js"/>
+	<meta name="WAF.catalog" />
+	
+	
+<style type="text/css" media="screen">
+	li ul {display:none;}
+	li:hover ul {display:block;}
+</style>
+</head>
+<body>
+
+<input id="valueToSearch" type="text"><button id="performQuery">query by name</button>
+		<div id="display"></div>
+
+<ul>
+<li><h2>JS and DB Server<h2>
+	<ul>
+		<lil></li>
+		<lil></li>
+		<lil></li>
+	</ul>
+</li>
+<li>that</li>
+</ul>
+
+<button>Yeo</button>
+
+
+<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
+<script>
+	
+	function liWalk(){
+		Array.prototype.forEach.call(document.getElementsByTagName('li'), function(li){
+			li.className.fontSize='44pt';
+			
+			li.style.fontSize='inherit';
+		});
+	}
+	
+</script>
+
+<script>
+WAF.onAfterInit = function() {
+	
+	function displayArray(arr) {
+		var html = "";
+		arr.forEach(function(elem) {
+			html += '<div class="line">'
+			html += '<span class="cell-name">' + elem.name + '</span>';
+			html += '</div>'
+		});
+		var display = document.getElementById('display');
+		display.innerHTML = html;
+	}
+	
+	function performTheQuery(event) {
+		var valInput = document.getElementById('valueToSearch');
+		var valueToSearch = valInput.value;
+		ds.Chicken.query("name == :1", valueToSearch+"*", {
+			onSuccess: function(e) {
+				e.entityCollection.toArray("name", {
+					top:40,
+					onSuccess: function(e2) {
+						displayArray(e2.result);
+					}
+				});
+			}
+		});
+	}
+	document.getElementById('performQuery').addEventListener("click", performTheQuery );
+	document.getElementById('valueToSearch').addEventListener('keyup', performTheQuery);
+}
+</script>
+
+</body></html>
