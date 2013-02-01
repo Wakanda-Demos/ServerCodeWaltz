@@ -1,0 +1,9 @@
+#SimpleSearch {
+	width: 20em;
+	padding: 1em;
+	float:right;
+	border-left: .5em yellow solid;
+}
+body {
+	margin:0px;padding:0px;
+}

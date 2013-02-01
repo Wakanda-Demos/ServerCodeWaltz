@@ -1,50 +1,26 @@
 ﻿<!DOCTYPE html>
 <html>
-<head><title>JS and DB Server</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head><title>Wakanda Server</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="WAF.config.modules" content="dataprovider"/>
 	<meta name="WAF.config.loadJS" content="index.js"/>
+	<meta name="WAF.config.loadCSS" content="index.css"/>
 	<meta name="WAF.catalog" />
 	
-	
-<style type="text/css" media="screen">
-	li ul {display:none;}
-	li:hover ul {display:block;}
-</style>
 </head>
 <body>
 
-<input id="valueToSearch" type="text"><button id="performQuery">query by name</button>
+	<div id="SimpleSearch">
+		<input id="valueToSearch" type="text" />
+		<button id="performQuery">query by name</button>
 		<div id="display"></div>
-
-<ul>
-<li><h2>JS and DB Server<h2>
-	<ul>
-		<lil></li>
-		<lil></li>
-		<lil></li>
-	</ul>
-</li>
-<li>that</li>
-</ul>
-
-<button>Yeo</button>
+	</div>
 
 
 <script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
-<script>
-	
-	function liWalk(){
-		Array.prototype.forEach.call(document.getElementsByTagName('li'), function(li){
-			li.className.fontSize='44pt';
-			
-			li.style.fontSize='inherit';
-		});
-	}
-	
-</script>
 
-<script>
+
+<script type="text/javascript">
 WAF.onAfterInit = function() {
 	
 	function displayArray(arr) {
