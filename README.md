@@ -17,18 +17,18 @@ Though we are moving forward on getting everything working without the need for 
 
 All in One
 ----------
-* [OS X - Wakanda Server + Studio Dev Build 0.124861 - (90M) ](http://download.wakanda.org/DevChannel/Main/Mac/125861/Wakanda-All-in-One-Dev-125861.zip)
-* Windows - Wakanda Server + Studio Dev Build 0.124861
+* [OS X - Wakanda Server + Studio Dev Build 0.125861 - (90M) ](http://download.wakanda.org/DevChannel/Main/Mac/125861/Wakanda-All-in-One-Dev-125861.zip)
+* Windows - Wakanda Server + Studio Dev Build 0.125861
   * [64-bit (83M)](http://download.wakanda.org/DevChannel/Main/Windows/125861/Wakanda-All-in-One-64-Dev-125861.zip)
   * [32-bit (80M)](http://download.wakanda.org/DevChannel/Main/Windows/125861/Wakanda-All-in-One-32-Dev-125861.zip)
 
 Wakanda Server Only
 -------------------
-* [OS X - Wakanda Server Build 0.124861 - (40M) ](http://download.wakanda.org/DevChannel/Main/Mac/125861/Wakanda-Server-x64.zip)
+* [OS X - Wakanda Server Build 0.125861 - (40M) ](http://download.wakanda.org/DevChannel/Main/Mac/125861/Wakanda-Server-x64.zip)
 * Windows - Wakanda Server Build 0.124861
   * [64-bit (35M)](http://download.wakanda.org/DevChannel/Main/Windows/125861/Wakanda-Server-x64.zip)
   * [32-bit (33M)](http://download.wakanda.org/DevChannel/Main/Windows/125861/Wakanda-Server-x32.zip)
-* Linux - Wakanda Server Build 0.124861
+* Linux - Wakanda Server Build 0.125861
   * [64-bit (39M)](http://download.wakanda.org/DevChannel/Main/Linux/125861/Wakanda-Server-x64.zip)
   * [32-bit (39M)](http://download.wakanda.org/DevChannel/Main/Linux/125861/Wakanda-Server.zip)
 
@@ -36,6 +36,28 @@ Wakanda Server Only
 ===================================================
 
 The [Model API documentation](http://doc.wakanda.org/Model/Working-with-the-Model-API.200-975844.en.html) covers this content pretty well.
+
+
+Running the Server from Command Line
+====================================
+
+The documentation covers [Launching Wakanda Server using a Command Line](http://doc.wakanda.org/Wakanda-Server-Administration/Managing-Wakanda-Server/Launching-Wakanda-Server-using-a-Command-Line.300-583228.en.html)
+
+Here is the basics:
+
+	Wakanda_server_name [solution_path] [--admin-port=http_port_number] [--admin-ssl-port=http_port_number] [--debug-off]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
