@@ -25,7 +25,7 @@ All in One
 Wakanda Server Only
 -------------------
 * [OS X - Wakanda Server Build 0.125861 - (40M) ](http://download.wakanda.org/DevChannel/Main/Mac/125861/Wakanda-Server-x64.zip)
-* Windows - Wakanda Server Build 0.124861
+* Windows - Wakanda Server Build 0.125861
   * [64-bit (35M)](http://download.wakanda.org/DevChannel/Main/Windows/125861/Wakanda-Server-x64.zip)
   * [32-bit (33M)](http://download.wakanda.org/DevChannel/Main/Windows/125861/Wakanda-Server-x32.zip)
 * Linux - Wakanda Server Build 0.125861
