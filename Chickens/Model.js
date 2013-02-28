@@ -12,4 +12,4 @@ include("classes/chicken.js");
 
 include("classes/breed.js");
 
-
+include("classes/coop.js");

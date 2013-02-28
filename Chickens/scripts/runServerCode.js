@@ -9,8 +9,9 @@ function runMe(request, response){
 	response.contentType = 'text/html';
 	var res = "Our Project is at: ";
 	res += ds.getModelFolder().path;
-	res += "<br /><br />";
-	res += "And here is some json from GitHub: <br />"
+	res += "<br /><br />Version of Wakanda:";
+	res += process.version;
+	res += "<br /><br />And here is some json from GitHub: <br />"
 	
 	response.body =  res + xhr.responseText;
 }
