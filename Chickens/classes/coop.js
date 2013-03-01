@@ -9,6 +9,6 @@ coop.addMethod("generateCoopsWithWorker", "dataClass", function(numberOfCoops, p
 	
 	var worker = new Worker('scripts/genDataWorker.js');
 	worker.postMessage({numberOfCoops: numberOfCoops, progressReference: progressReference});
-	console.log('Parent has terminated.');
+	console.log('Parent Closed');
 	
 },  "public");
