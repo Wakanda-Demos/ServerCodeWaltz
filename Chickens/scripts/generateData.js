@@ -86,7 +86,7 @@ function generateSomeData(coopCount, progressReference) {
 					name: henFirstNames.getRandomElement(),
 					hatchDate: new Date(randomInteger(2010, 2012), randomInteger(0, 11), randomInteger(1, 28)),
 					coop: coop,
-					breed: (currentBreedID),
+					breed: ds.Breed.find("ID = :1", currentBreedID),
 					gender: "female"
 				});
 				try
@@ -106,7 +106,7 @@ function generateSomeData(coopCount, progressReference) {
 					name: roosterFirstNames.getRandomElement(),
 					hatchDate: new Date(randomInteger(2010, 2012), randomInteger(0, 11), randomInteger(1, 28)),
 					coop: coop,
-					breed: (currentBreedID),
+					breed: ds.Breed.find("ID = :1", currentBreedID),
 					gender: "male"
 				});
 				try
