@@ -74,6 +74,7 @@ function generateSomeData(coopCount, progressReference) {
             progress.setValue(i);
 			var j;
 			var numberOfHens = Math.ceil( Math.random() * 20);
+		    numberOfHens = 10; //testing speed
 		
 			coop = new ds.Coop({name: coopNames.getRandomElement()});
 			coop.save();
@@ -85,7 +86,7 @@ function generateSomeData(coopCount, progressReference) {
 					name: henFirstNames.getRandomElement(),
 					hatchDate: new Date(randomInteger(2010, 2012), randomInteger(0, 11), randomInteger(1, 28)),
 					coop: coop,
-					breed: ds.Breed.find("ID = :1", currentBreedID),
+					breed: (currentBreedID),
 					gender: "female"
 				});
 				try
@@ -97,14 +98,15 @@ function generateSomeData(coopCount, progressReference) {
         		}				
 
 			};
-			if (rangedRandom(1,10) == 9)
+			//testing speed if (rangedRandom(1,10) == 9)
+            if (rangedRandom(1,10) > 0)
 			{
 				var currentBreedID = breedIds[rangedRandom(0, breedIds.length-1)].ID;
 				rooster = new ds.Chicken({
 					name: roosterFirstNames.getRandomElement(),
 					hatchDate: new Date(randomInteger(2010, 2012), randomInteger(0, 11), randomInteger(1, 28)),
 					coop: coop,
-					breed: ds.Breed.find("ID = :1", currentBreedID),
+					breed: (currentBreedID),
 					gender: "male"
 				});
 				try
