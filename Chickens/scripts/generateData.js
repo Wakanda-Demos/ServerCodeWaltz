@@ -49,7 +49,7 @@ function generateSomeData(coopCount, progressReference) {
 		});
 		status = status + "Created Breeds\n";
 	}
-	var breedIds = ds.Breed.all().toArray("ID");
+	var breedIds = ds.Breed.all();
     if (coopNames != null && ds.Coop.all().length > 300 ){
     	
 
@@ -85,7 +85,7 @@ function generateSomeData(coopCount, progressReference) {
 					name: henFirstNames.getRandomElement(),
 					hatchDate: new Date(randomInteger(2010, 2012), randomInteger(0, 11), randomInteger(1, 28)),
 					coop: coop,
-					breed: ds.Breed.find("ID = :1", currentBreedID),
+					breed: (currentBreedID),
 					gender: "female"
 				});
 				try
@@ -104,7 +104,7 @@ function generateSomeData(coopCount, progressReference) {
 					name: roosterFirstNames.getRandomElement(),
 					hatchDate: new Date(randomInteger(2010, 2012), randomInteger(0, 11), randomInteger(1, 28)),
 					coop: coop,
-					breed: ds.Breed.find("ID = :1", currentBreedID),
+					breed: (currentBreedID),
 					gender: "male"
 				});
 				try
