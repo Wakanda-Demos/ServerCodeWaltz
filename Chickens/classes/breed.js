@@ -1,1 +1,1 @@
-﻿breed = model.addClass("Breed", "Breeds");breed.addAttribute("ID", "storage", "long", "key auto");breed.addAttribute("name", "Storage", "string");breed.addAttribute("birds", "relatedEntities", "Chickens", "breed", {reversePath:true});
+﻿breed = model.addClass("Breed", "Breeds");breed.addAttribute("ID", "storage", "long", "key auto");breed.addAttribute("name", "Storage", "string");breed.addAttribute("birds", "relatedEntities", "Chickens", "breed", {reversePath:true});breed.addAttribute("eggColor", "storage", "string");

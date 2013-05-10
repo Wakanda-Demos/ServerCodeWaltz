@@ -1,142 +1,1 @@
-﻿{
-    "toJSON": true,
-    "dbInfo": [{
-        "name": "Model",
-        "uuid": "20202020202020202020202020202020"
-    }],
-    "extraProperties": {
-        "version": "1",
-        "classes": {
-            "Chicken": {
-                "panelColor": "#548DD4",
-                "panel": {
-                    "isOpen": "true",
-                    "pathVisible": true,
-                    "position": {
-                        "X": 20,
-                        "Y": 19
-                    }
-                }
-            },
-            "Coop": {
-                "panelColor": "#D88CFF",
-                "panel": {
-                    "isOpen": "true",
-                    "pathVisible": true,
-                    "position": {
-                        "X": 272,
-                        "Y": 38
-                    }
-                }
-            }
-        },
-        "model": {
-            "scriptMode": "manual",
-            "relationCurve": {
-                "mode": 1,
-                "run": true
-            }
-        }
-    },
-    "dataClasses": [{
-        "name": "Chicken",
-        "className": "Chicken",
-        "collectionName": "Chickens",
-        "scope": "public",
-        "uuid": "077035E6691340C395FE707B73D62695",
-        "attributes": [{
-            "name": "ID",
-            "kind": "storage",
-            "scope": "public",
-            "uuid": "CEF76DE5D96944FBADA2FAC707C3D937",
-            "unique": true,
-            "autosequence": true,
-            "type": "long",
-            "primKey": true
-        }, {
-            "name": "name",
-            "kind": "storage",
-            "scope": "public",
-            "uuid": "2E8F6CF570B94EE1B1D352C3B1C88490",
-            "type": "string"
-        }, {
-            "name": "hatchDate",
-            "kind": "storage",
-            "scope": "public",
-            "uuid": "268B1390B50E4869B87F728868020901",
-            "type": "date",
-            "simpleDate": false
-        }, {
-            "name": "coop",
-            "kind": "relatedEntity",
-            "scope": "public",
-            "uuid": "50B14B3DEFC64D6CA480279E33EBF643",
-            "type": "Coop",
-            "path": "Coop"
-        }, {
-            "name": "age",
-            "kind": "calculated",
-            "scope": "public",
-            "type": "long",
-            "scriptKind": "javascript",
-            "onGet": [{
-                "from": "model.Chicken.age.onGet",
-                "userDefined": true
-            }],
-            "onQuery": [{
-                "from": "model.Chicken.age.onQuery",
-                "userDefined": true
-            }],
-            "onSort": [{
-                "from": "model.Chicken.age.onSort",
-                "userDefined": true
-            }]
-        }, {
-            "name": "gender",
-            "kind": "storage",
-            "scope": "public",
-            "type": "string"
-        }, {
-            "name": "breed",
-            "kind": "relatedEntity",
-            "scope": "public",
-            "type": "Breed",
-            "path": "Breed"
-        }]
-    }, {
-        "name": "Coop",
-        "className": "Coop",
-        "collectionName": "Coops",
-        "scope": "public",
-        "uuid": "95995A60E60B43398E3061B2EFF91BE5",
-        "attributes": [{
-            "name": "ID",
-            "kind": "storage",
-            "scope": "public",
-            "uuid": "1B796474DF47463AAC7661003ED6D4EA",
-            "unique": true,
-            "autosequence": true,
-            "type": "long",
-            "primKey": true
-        }, {
-            "name": "name",
-            "kind": "storage",
-            "scope": "public",
-            "uuid": "A5E7D323D63646FBA5C4026793361BED",
-            "type": "string"
-        }, {
-            "name": "city",
-            "kind": "storage",
-            "scope": "public",
-            "uuid": "56369282B8AF40CBB5A992E8E4ECA04C",
-            "type": "string"
-        }, {
-            "name": "chickens",
-            "kind": "relatedEntities",
-            "scope": "public",
-            "type": "Chickens",
-            "reversePath": true,
-            "path": "coop"
-        }]
-    }]
-}
+﻿{	"toJSON": true,	"dbInfo": [		{			"name": "Model",			"uuid": "20202020202020202020202020202020"		}	],	"extraProperties": {		"version": "1",		"classes": {			"Chicken": {				"panelColor": "#548DD4",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 20,						"Y": 19					}				}			},			"Coop": {				"panelColor": "#D88CFF",				"panel": {					"isOpen": "true",					"pathVisible": true,					"position": {						"X": 272,						"Y": 38					}				}			},			"Breed": {				"panel": {					"isOpen": "false",					"position": {						"X": 595,						"Y": 20					}				},				"panelColor": "#D7E3BC"			}		},		"model": {			"scriptMode": "manual",			"relationCurve": {				"mode": 1,				"run": true			},			"workspaceLeft": 0,			"workspaceTop": 0		}	},	"dataClasses": [		{			"name": "Chicken",			"className": "Chicken",			"collectionName": "Chickens",			"scope": "public",			"uuid": "077035E6691340C395FE707B73D62695",			"attributes": [				{					"name": "ID",					"kind": "storage",					"scope": "public",					"uuid": "CEF76DE5D96944FBADA2FAC707C3D937",					"unique": true,					"autosequence": true,					"type": "long",					"primKey": true				},				{					"name": "name",					"kind": "storage",					"scope": "public",					"uuid": "2E8F6CF570B94EE1B1D352C3B1C88490",					"type": "string"				},				{					"name": "hatchDate",					"kind": "storage",					"scope": "public",					"uuid": "268B1390B50E4869B87F728868020901",					"type": "date",					"simpleDate": false				},				{					"name": "coop",					"kind": "relatedEntity",					"scope": "public",					"uuid": "50B14B3DEFC64D6CA480279E33EBF643",					"type": "Coop",					"path": "Coop"				},				{					"name": "age",					"kind": "calculated",					"scope": "public",					"type": "long",					"scriptKind": "javascript",					"onGet": [						{							"from": "model.Chicken.age.onGet",							"userDefined": true						}					],					"onQuery": [						{							"from": "model.Chicken.age.onQuery",							"userDefined": true						}					],					"onSort": [						{							"from": "model.Chicken.age.onSort",							"userDefined": true						}					]				},				{					"name": "gender",					"kind": "storage",					"scope": "public",					"type": "string"				},				{					"name": "breed",					"kind": "relatedEntity",					"scope": "public",					"type": "Breed",					"path": "Breed"				}			]		},		{			"name": "Coop",			"className": "Coop",			"collectionName": "Coops",			"scope": "public",			"uuid": "95995A60E60B43398E3061B2EFF91BE5",			"attributes": [				{					"name": "ID",					"kind": "storage",					"scope": "public",					"uuid": "1B796474DF47463AAC7661003ED6D4EA",					"unique": true,					"autosequence": true,					"type": "long",					"primKey": true				},				{					"name": "name",					"kind": "storage",					"scope": "public",					"uuid": "A5E7D323D63646FBA5C4026793361BED",					"type": "string"				},				{					"name": "city",					"kind": "storage",					"scope": "public",					"uuid": "56369282B8AF40CBB5A992E8E4ECA04C",					"type": "string"				},				{					"name": "chickens",					"kind": "relatedEntities",					"scope": "public",					"type": "Chickens",					"reversePath": true,					"path": "coop"				}			],			"methods": [				{					"name": "generateCoops",					"applyTo": "dataClass",					"scope": "public",					"from": "model.Coop.methods.generateCoops",					"userDefined": true				},				{					"name": "generateCoopsWithWorker",					"applyTo": "dataClass",					"scope": "public",					"from": "model.Coop.methods.generateCoopsWithWorker",					"userDefined": true				}			]		}	]}
