@@ -14,11 +14,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	};// @lock
 
-	birdsEvent.onBeforeCurrentElementChange = function birdsEvent_onBeforeCurrentElementChange (event)// @startlock
-	{// @endlock
+	WAF.sources.breed.addListener("onBeforeCurrentElementChange", function() {
 		$('#dataGrid4').addClass('disable');
-	};// @lock
-
+	}, "WAF");
 
 	dataGrid4.onCellClick = function dataGrid4_onCellClick (event)// @startlock
 	{// @endlock
@@ -27,7 +25,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region eventManager// @startlock
 	WAF.addListener("birds", "onCollectionChange", birdsEvent.onCollectionChange, "WAF");
-	WAF.addListener("birds", "onBeforeCurrentElementChange", birdsEvent.onBeforeCurrentElementChange, "WAF");
 	WAF.addListener("dataGrid4", "onCellClick", dataGrid4.onCellClick, "WAF");
 // @endregion
 };// @endlock
