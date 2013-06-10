@@ -4,6 +4,7 @@ function runMe(request, response){
 	xhr = new XMLHttpRequest();
 	xhr.open('GET', 'https://api.github.com/users/Wakanda');
 //	xhr.open('GET', 'https://api.github.com/repos/W/:repo/commits
+	xhr.setRequestHeader('User-Agent',"wakandaDB sample - lyle@4d.com")
 	xhr.send();
 	
 	response.contentType = 'text/html';
