@@ -35,6 +35,7 @@ function handleDataInitRequest(request, response){
 function generateSomeData(coopCount, progressReference) {
 	progressReference = progressReference || "generateCoops";
 	coopCount = coopCount || 100;
+	var Faker = require('Faker');
 	var status = '';
 	var breeds = loadArrayFromFile("breeds.txt");
 	var roosterFirstNames = loadArrayFromFile("firstRoosters.txt");
@@ -54,6 +55,8 @@ function generateSomeData(coopCount, progressReference) {
     	
 
         // Let's erase the exisitng coops and chickens
+		ds.Address.remove();
+		ds.Address.setAutoSequenceNumber(1);
 		ds.Coop.remove();
 		ds.Coop.setAutoSequenceNumber(1);
 		ds.Chicken.remove();
@@ -71,11 +74,31 @@ function generateSomeData(coopCount, progressReference) {
             true, "", progressReference);
 		for (i=0; i< coopCount; i++)
 		{
+			//create or use an existing address
+			var address = new ds.Address({
+				name: Faker.Company.companyName(0),
+				street: Faker.Address.streetAddress(),
+				street2:Faker.Address.secondaryAddress()	
+			});
+			address.city = Faker.Address.city();
+			address.zip = Faker.Address.zipCode();
+			if (i%3){
+				address.state = Faker.Address.usState();
+				address.country = 'United States';
+			}else{
+				address.state = Faker.Address.brState();
+				address.country = Faker.Address.ukCountry();
+			}
+			
+			address.save();
+			
             progress.setValue(i);
 			var j;
 			var numberOfHens = Math.ceil( Math.random() * 20);
-		
-			coop = new ds.Coop({name: coopNames.getRandomElement()});
+			var coopName = Faker.random.bs_adjective();
+			coopName = coopName.charAt(0).toUpperCase() + coopName.substring(1);
+			coop = new ds.Coop({name: coopName + ' ' + address.name});
+			coop.address = address;
 			coop.save();
 			for (j=0; j < numberOfHens; j++)
 			{
